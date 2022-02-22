@@ -1,0 +1,27 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "clone of urban outfitters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikash-vashistha/CloneUrbanOutfittersBackEnd.git"
+  },
+  "author": "vikash vashistha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikash-vashistha/CloneUrbanOutfittersBackEnd/issues"
+  },
+  "homepage": "https://github.com/vikash-vashistha/CloneUrbanOutfittersBackEnd#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.3"
+  }
+}
