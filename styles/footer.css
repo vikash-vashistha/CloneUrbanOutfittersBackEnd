@@ -1,0 +1,175 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+#footer {
+  margin-top: 50px;
+  background-color: whitesmoke;
+}
+#footermiddlediv {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  margin-top: 3%;
+}
+#footermiddlediv > ul > li {
+  list-style: none;
+}
+#footermiddlediv > ul > li > a {
+  text-decoration: none;
+  line-height: 2.3;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.918);
+}
+#footermiddlediv > ul > li > a:hover {
+  color: grey;
+}
+#footertopdiv {
+  padding: 3%;
+}
+#footertopdivinner {
+  display: flex;
+  justify-content: space-around;
+}
+#footertopdivinner > #footertopdivinner1 {
+  width: 35%;
+  /* border: 1px solid black; */
+}
+#footertopdivinner > #footertopdivinner2 {
+  width: 45%;
+
+  /* border: 1px solid black; */
+}
+#footertopdivinner1p2 {
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 3%;
+  color: gray;
+}
+#footertopdivinner1p1 {
+  color: rgba(0, 0, 0, 0.904);
+}
+#footertopdivinner2inp {
+  height: 72%;
+  width: 78%;
+}
+#footertopdivinner2 > h5 {
+  margin-top: 2%;
+}
+#footertopdivinner2btn {
+  height: 77%;
+  width: 18%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-left: 7px;
+  cursor: pointer;
+}
+#footertopdivinner2btn:hover {
+  background-color: gray;
+}
+#footertopdivp {
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 0px 5%;
+  margin-top: 2%;
+  color: grey;
+}
+#anchorhead1 {
+  color: black;
+  font-weight: bold;
+}
+#anchorhead1:hover {
+  color: black;
+  text-decoration: underline;
+}
+#anchorhead {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+#icondiv {
+  display: flex;
+  /* margin-bottom: 100px; */
+  /* border: 1px solid black; */
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+#icondiv1inner {
+  display: flex;
+  border: 1px solid black;
+  color: rgba(0, 0, 0, 0.822);
+  padding: 3px;
+  border-radius: 8px;
+}
+#icondiv1inner > div > #icondiv1innerp1 {
+  font-size: 12px;
+}
+#icondiv1inner > div > #icondiv1innerp2 {
+  font-weight: bold;
+}
+#appleicon {
+  font-size: 30px;
+}
+#icondiv2inner {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.822);
+  padding: 3px;
+  border-radius: 8px;
+}
+#icondiv2inner > div > #icondiv2innerp1 {
+  font-size: 12px;
+}
+#icondiv2inner > div > #icondiv2innerp2 {
+  font-weight: bold;
+}
+#playstoreicon {
+  font-size: 30px;
+}
+#icondiv1 > a {
+  color: black;
+  text-decoration: none;
+}
+#icondiv2 > a {
+  color: black;
+  text-decoration: none;
+}
+#icondiv3 > a > i {
+  font-size: 25px;
+  margin-left: 20px;
+}
+#icondiv3 > a > i {
+  color: rgba(0, 0, 0, 0.822);
+}
+#icondiv3 > a > i:hover {
+  color: grey;
+}
+#footerbottomdiv {
+  /* border: 1px solid red; */
+  height: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+#footerbottomdiv > #footerbottomdiv1 > a {
+  color: rgba(0, 0, 0, 0.877);
+  text-decoration: none;
+  font-size: 11px;
+  margin-left: 7px;
+}
+#footerbottomdiv > #footerbottomdiv1 > a:hover {
+  color: gray;
+}
+#footerbottomdiv2 {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.877);
+}
+#footerbottomdiv1a {
+  font-weight: bold;
+}

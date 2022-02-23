@@ -1,16 +1,16 @@
 const express = require("express");
 
-const Product = require("../models/productModel");
+const Women = require("../models/womenModel");
 
 const router = express.Router();
 
 router.post("", async(req,res)=>{
     try {
 
-        const product = await Product.create(req.body);
+        const women = await Women.create(req.body);
         // const user = await User.create(req.body);
 
-        return res.status(200).send(product);
+        return res.status(200).send(women);
         
     } catch (err) {
         console.log("error is : ", err);
@@ -19,15 +19,15 @@ router.post("", async(req,res)=>{
     }
 })
 
-//---------------------------get all products----------------------------------------//
+//---------------------------get all womens----------------------------------------//
 
 router.get("", async(req,res)=>{
     try {
 
-        const product = await Product.find().lean().exec();
+        const women = await Women.find().lean().exec();
         // const user = await User.create(req.body);
 
-        return res.status(200).send(product);
+        return res.status(200).send(women);
         
     } catch (err) {
         console.log("error is : ", err);

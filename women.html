@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/women.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+
+</head>
+<style>
+    #signindiv {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- top offers -->
+    <!-- <div id="offers"></div> -->
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- products data body  -->
+
+    <div id="main_productdata_body">
+
+        <div id="all_product_data">
+
+            <div id="products_categories">
+                <div id="categories_1"><img
+                        src="https://images.ctfassets.net/q602vtcuu3w3/1Ow7cF3Y9ydUqEPmjR0IJG/6620c7f6765a9086d020cc19f96206f1/22_JAN_WK1_W_OPT_BANNERS_EM.jpg?w=563&q=80&fm=webp"
+                        alt=""></div>
+                <div id="categories_2"><img
+                        src="https://images.ctfassets.net/q602vtcuu3w3/128rwAQjtiAGFtFHLVZIJX/cbb0ce0b51638e82476e8f1de3e6f26e/22_JAN_WK1_W_OPT_BANNERS_EM4.jpg?w=563&q=80&fm=webp"
+                        alt=""></div>
+                <div id="categories_3"><img
+                        src="https://images.ctfassets.net/q602vtcuu3w3/30VOrWNAZpvetontWKjjjt/2da65909ad608a086f5e5c7426f714e5/22_JAN_WK1_W_OPT_BANNERS_EM2.jpg?w=563&q=80&fm=webp"
+                        alt=""></div>
+                <div id="categories_4"><img
+                        src="https://images.ctfassets.net/q602vtcuu3w3/5xQH1HYsG3SpKgmPlhihiY/98b1763bb5e8ebd7d558dd98ede7af0f/22_JAN_WK1_W_OPT_BANNERS_EM5.jpg?w=563&q=80&fm=webp"
+                        alt=""></div>
+            </div>
+
+        </div>
+        <!-- product body browse by ,products,price, and all -->
+        <div id="products_all_things">
+            <!-- left portion were all filter option are there -->
+            <div id="browse_by">
+                <div id="browse_by_heading">
+
+                    <li style="list-style-type: none;"><b>browse by:</b></li>
+                    <li>All Category</li>
+                    <li>---</li>
+                    <li>Dresses</li>
+                    <li>Jeanse</li>
+                    <li>Tops</li>
+                    <li>Coats+Jackets</li>
+                    <li>bottoms</li>
+                    <li id="to_swomenshoe_page">Shoes</li>
+
+                    <li><b>Filter by:</b></li>
+                    <hr style="width: 100%; height: 1px;">
+                    <select name="" id="bysize_" style="width: 100%; height: 35px; border: none;">
+                        <option value="size">size</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="S/M">S/M</option>
+                        <option value="M">M</option>
+                        <option value="M/L">M/L</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <hr style="width: 100%; height: 1px;">
+                    <select name="" id="bycolor_" style="width: 100%; height: 35px; border: none;">
+                        <option value="">Color</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="white">White</option>
+                        <option value="gray">Gray</option>
+                        <option value="pink">Pink</option>
+                        <option value="orange">Orange</option>
+                        <option value="yello">Yello</option>
+                    </select>
+                    <hr style="width: 100%; height: 1px;">
+                    <select name="" id="bybrand_" style="width: 100%; height: 35px; border: none;">
+                        <option value="">Brand</option>
+                        <option value="adidas">adidas</option>
+                        <option value="adorn">adorn</option>
+                        <option value="boka">boka</option>
+                        <option value="nike">Nike</option>
+                        <option value="noto">noto</option>
+                    </select>
+                    <hr style="width: 100%; height: 1px;">
+                    <select name="" id="byprice_" style="width: 100%; height: 35px; border: none;">
+                        <option value="">Price</option>
+                        <option value="25">Less than $25</option>
+                        <option value="50">$25-$50</option>
+                        <option value="100">$50-$100</option>
+                        <option value="200">$100-$200</option>
+                        <option value="500">$200-$500</option>
+                        <option value="more">More than $500</option>
+                    </select>
+                    <hr style="width: 100%; height: 1px;">
+                    <select name="" id="" style="width: 100%; height: 35px; border: none;">
+                        <option value="">Free Pickup</option>
+                        <option value="">Store Pickup</option>
+
+                    </select>
+                    <hr style="width: 100%; height: 1px;">
+
+
+                </div>
+
+            </div>
+            <!-- number of products and _ sorting section -->
+            <div id="products_count_sort">
+
+                <div id="products_section_count">Women's Clothing: Tops, Dresses, Denim + More <span
+                        id="number_of_products_">30 products</span> </div>
+
+                <div id="sort_function">
+                    sort :
+                    <select name="" id="by_sort_" style="width: 40%;">
+                        <option value="">Featured</option>
+                        <option value="lowtohigh">Price:Low to High</option>
+                        <option value="hightolow">Price:High to Low</option>
+                        <option value="new">Newest</option>
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+
+                    <span id="page_no_">
+                        < 1/20>
+                    </span>
+                </div>
+            </div>
+            <!-- alll products with there price , color and images  -->
+            <div id="product__img_name_price">
+
+
+
+                <!-- <div id="main_product_div">
+                    <div id="img_of_product"><img src="https://images.urbndata.com/is/image/UrbanOutfitters/60112513_102_b?$xlarge$&fit=constrain&qlt=80&wid=100" alt=""></div>
+                    <div id="product_name_price" >
+                        <p>name of product</p>
+                        <p>
+                            <span id="product_actual_price">$200</span>
+                             <span  id="product_plus_dicount">+50% off</span>
+                        </p>
+                    </div>
+                </div> -->
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="footer"></div>
+
+
+</body>
+
+</html>
+<script type="module">
+
+
+
+    import navbar from './components/navbar.js'
+    import footer from './components/footer.js'
+    let nav = document.getElementById("navbar");
+
+    nav.innerHTML = navbar()
+
+
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    document.querySelector(".fa-shopping-bag").innerHTML = cart.length;
+
+    let foot = document.getElementById("footer");
+    foot.innerHTML = footer()
+
+
+
+    ///////////////////////////////////////////////////
+
+    ////change location of page //////
+
+    document.getElementById("categories_2").addEventListener("click", () => {
+        window.location.href = "womenshoe.html"
+    })
+    document.getElementById("to_swomenshoe_page").addEventListener("click", () => {
+        window.location.href = "womenshoe.html"
+    })
+
+    //////////////////////////////////////
+
+    let bag = document.querySelector(".fa-shopping-bag");
+    console.log(bag);
+
+    bag.addEventListener("click", function () {
+        window.location.href = "cart.html";
+    });
+
+    document.getElementById("back").addEventListener("click", function () {
+        window.location.href = "index.html"
+    })
+
+
+
+</script>
+<script src="./scripts/women.js"></script>
