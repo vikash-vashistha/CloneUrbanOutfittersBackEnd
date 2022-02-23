@@ -165,7 +165,8 @@
         // let data = All_data.women;          ////// taking data from all_data with key women
 
         //-----------------fetching database----------------------//
-        url = `http://localhost:5252/products`
+
+        url = `http://localhost:5252/womens?page=1&size=10`
 
         async function getUser() {
         
@@ -176,9 +177,9 @@
            
             //  let user = data.data            // collect data by this line (we use await for collect data )
             console.log("data:", data);
-            let women = data[0].women;
-            console.log("women:", women)
-            appenddata(women)
+            // let women = data[0].women;
+            // console.log("women:", women)
+            appenddata(data)
         }
         
         catch (err) {

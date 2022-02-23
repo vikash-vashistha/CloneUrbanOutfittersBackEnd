@@ -1,13 +1,15 @@
 const express = require("express");
 const connect = require("./configs/db")
 
-const productController = require("./controllers/womenController")
+const womenController = require("./controllers/womenController")
+const menController = require("./controllers/menController")
 
 const app = express();
 
 app.use(express.json());
 
-app.use("/womens", productController);
+app.use("/womens", womenController);
+app.use("/mens", menController);
 
 app.listen(5252, async()=>{
     try {
