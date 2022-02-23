@@ -1,19 +1,13 @@
-const express = require("express");
-const connect = require("./configs/db");
-const app = express();
-const checkoutcontroller=require("./controllers/checkout.controller.js")
+const express=require("express");
+const app=express();
+const userController=require("./controllers/checkout.controller")
+const nodemailer = require("nodemailer");
+const connect=require("./configs/db");
 app.use(express.json());
+app.use("/users",userController);
+   
 
-
-app.use("/checkout",checkoutcontroller);
-
-app.listen(4000, async function () {
-  try {
-
-
-    await connect();
-    console.log("app is listening on port 4000");
-  } catch (err) {
-    console.log(err.message);
-  }
+app.listen("8766",async()=>{
+    await connect()
+    console.log("listening at port 8766");
 });
