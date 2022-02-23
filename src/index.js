@@ -11,17 +11,15 @@ app.use("/users", userController);
 
 app.post(
   "/register",
-  body("firstName").isLength({ min: 3, max: 30 }),
-  body("lastName").isLength({ min: 3, max: 30 }),
   body("email").notEmpty(),
   register
 );
 app.post("/login", login);
 
-app.listen(4000, async function () {
+app.listen(5500, async function () {
   try {
     await connect();
-    console.log("app is listening on port 4000");
+    console.log("app is listening on port 5500");
   } catch (err) {
     console.log(err.message);
   }

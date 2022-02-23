@@ -46,6 +46,12 @@ const login = async (req, res) => {
       return res.status(400).send({ message: "please try again" });
     }
     const token = newToken(user);
+
+    // res.cookie("jwt", token, {
+    //   expires: new Date(date.now() + 3000000),
+    //   httpOnly: true,
+    // });
+
     res.send({ user, token });
   } catch (err) {
     res.status(500).send(err.message);
