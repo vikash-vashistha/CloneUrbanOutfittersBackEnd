@@ -7,6 +7,8 @@ const { body } = require("express-validator");
 const app = express();
 
 app.use(express.json());
+
+app.use(express.json());
 app.use("/users", userController);
 
 app.post(
