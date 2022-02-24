@@ -13,13 +13,7 @@ const mongoose = require("mongoose");
 
 
 module.exports = () => {
-  return mongoose.connect(
-<<<<<<< Updated upstream
-    "mongodb+srv://skale0181:sagar@cluster0.wqpjq.mongodb.net/products_data"
-=======
-    "mongodb+srv://santhosh:santhosh12_123@cluster0.k9mvg.mongodb.net/f1?retryWrites=true&w=majority"
->>>>>>> Stashed changes
-  );
+ return mongoose.connect("mongodb+srv://santhosh:santhosh12_123@cluster0.k9mvg.mongodb.net/f1?retryWrites=true&w=majority");
 }
 
 
