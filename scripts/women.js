@@ -163,17 +163,42 @@
     // }
 
         // let data = All_data.women;          ////// taking data from all_data with key women
+        
+        //------------------------------------------------------------------------------//---------------------------------------------------------------------------//
+        // let count = document.getElementById("first_number_").innerHTML
+        let count = 1
+        console.log(count)
+        url = `http://localhost:5252/womens?page=1&size=12`
+        function next_page(){
+            
+             count = Number(count)+1;
+            document.getElementById("product__img_name_price").innerHTML = null
+            document.getElementById("first_number_").innerHTML  = count
+            console.log(count+1)
+            url = `http://localhost:5252/womens?page=${count}&size=12`
+            getUser()
+        }
+      
+        function previous_Page(){
 
+             count = Number(count)-1;
+            document.getElementById("product__img_name_price").innerHTML = null
+            document.getElementById("first_number_").innerHTML  = count
+            // x = 2;
+            console.log(count+2)
+            url = `http://localhost:5252/womens?page=${count}&size=12`
+            getUser()
+        }
+      
         //-----------------fetching database----------------------//
-
-        url = `http://localhost:5252/womens?page=1&size=10`
+        
 
         async function getUser() {
         
         try {
         
             let res = await fetch(url);            // get data from server by this line 
-            let data = await res.json();
+            var data = await res.json();
            
             //  let user = data.data            // collect data by this line (we use await for collect data )
             console.log("data:", data);
@@ -188,6 +213,7 @@
         }
         }
         getUser()
+
 
 //---------------------------//----------------------------------------//
 
@@ -313,18 +339,33 @@
         /////////////////////    filter functions are here ///////////////////////////////////
 
         ///            by size filter
+       
 
-document.getElementById("bysize_").addEventListener("change", ()=>{
-    let filter_items = data.filter(function(ele){
-        var val = document.getElementById("bysize_").value;
-        if(val=="size"){
-            return ele.size
-        }
-        return ele.size ==val;
-    })
-    document.getElementById("product__img_name_price").innerHTML=null;
-    // console.log(filter_items);
-    appenddata(filter_items)
+document.getElementById("bysize_").addEventListener("change", async()=>{
+   
+    url = `http://localhost:5252/womens`
+
+    try {
+            
+        let res = await fetch(url);            // get data from server by this line 
+        var data = await res.json();
+      
+        let filter_items = data.filter(function(ele){
+            var val = document.getElementById("bysize_").value;
+            if(val=="size"){
+                return ele.size
+            }
+            return ele.size ==val;
+        })
+        document.getElementById("product__img_name_price").innerHTML=null;
+        // console.log(filter_items);
+        appenddata(filter_items)
+    }
+    catch (err) {
+        console.log("this error get by spell mistake:", err)
+    
+    }
+    
 })
 
        /////         by color filter
@@ -387,28 +428,39 @@ document.getElementById("bysize_").addEventListener("change", ()=>{
     //////////////////////////////////   sort function here            /////////////////////////////////
 
 
-        document.getElementById("by_sort_").addEventListener("change",()=>{
-            let sort_items = data.sort(function(a,b){
-                 let val = document.getElementById("by_sort_").value;
+        document.getElementById("by_sort_").addEventListener("change",async()=>{
+            url = `http://localhost:5252/womens`
 
-                 if(val=="lowtohigh"){
-                     return Number(a.price) - Number(b.price);
-                 }
-                 else if(val == "hightolow"){
-                     return Number(b.price) - Number(a.price);
-                 }
-                 else if(val=="az"){
-                    if (a.name < b.name) return -1;
-                    return 0;
-                 }
-                 else if(val=="za"){
-                    if (a.name > b.name) return -1;
-                    return 0;
-                 }
-
-            })
-
-            document.getElementById("product__img_name_price").innerHTML=null;
-            // console.log(sort_items);
-            appenddata(sort_items)
+            try {
+                    
+                let res = await fetch(url);            // get data from server by this line 
+                var data = await res.json();
+            
+                
+                let sort_items = data.sort(function(a,b){
+                     let val = document.getElementById("by_sort_").value;
+    
+                     if(val=="lowtohigh"){
+                         return Number(a.price) - Number(b.price);
+                     }
+                     else if(val == "hightolow"){
+                         return Number(b.price) - Number(a.price);
+                     }
+                     else if(val=="az"){
+                        if (a.name < b.name) return -1;
+                        return 0;
+                     }
+                     else if(val=="za"){
+                        if (a.name > b.name) return -1;
+                        return 0;
+                     }
+    
+                })
+    
+                document.getElementById("product__img_name_price").innerHTML=null;
+                // console.log(sort_items);
+                appenddata(sort_items)
+            } catch (err) {
+                console.log("this error get by spell mistake:", err)
+            }
         })

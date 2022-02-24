@@ -22,10 +22,18 @@
     }
     #page_numbers{
         border: 1px dotted red;
-        height: 80px;
-        width: 72%;
-        margin-left: 22%;
-        
+        height: 40px;
+        width: 100%;
+                
+    }
+    #page_numbers{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 30px;
+    }
+    #first_number_ , #last_number_, #slash_{
+        font-size: 18px;
     }
 </style>
 
@@ -153,29 +161,38 @@
                 </div>
             </div>
             <!-- alll products with there price , color and images  -->
-            <div id="product__img_name_price">
+            <div>
 
-
-
-                <!-- <div id="main_product_div">
-                    <div id="img_of_product"><img src="https://images.urbndata.com/is/image/UrbanOutfitters/60112513_102_b?$xlarge$&fit=constrain&qlt=80&wid=100" alt=""></div>
-                    <div id="product_name_price" >
-                        <p>name of product</p>
-                        <p>
-                            <span id="product_actual_price">$200</span>
-                             <span  id="product_plus_dicount">+50% off</span>
-                        </p>
-                    </div>
-                </div> -->
-
-
-
-
+                <div id="product__img_name_price">
+    
+    
+    
+                    <!-- <div id="main_product_div">
+                        <div id="img_of_product"><img src="https://images.urbndata.com/is/image/UrbanOutfitters/60112513_102_b?$xlarge$&fit=constrain&qlt=80&wid=100" alt=""></div>
+                        <div id="product_name_price" >
+                            <p>name of product</p>
+                            <p>
+                                <span id="product_actual_price">$200</span>
+                                 <span  id="product_plus_dicount">+50% off</span>
+                            </p>
+                        </div>
+                    </div> -->
+    
+    
+    
+    
+                </div>
+                <div id="page_numbers">
+                          <div>
+                              <span id="less_than" onclick="previous_Page()"><</span>
+                              <span id="first_number_">1</span>
+                              <span id="slash_">/</span>
+                              <span id="last_number_">23</span>
+                              <span id="geater_than" onclick="next_page()">></span>
+                          </div>
+                </div>
             </div>
             
-        </div>
-        <div id="page_numbers">
-
         </div>
 
 

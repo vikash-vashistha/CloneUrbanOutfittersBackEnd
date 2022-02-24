@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const menSchema = new mongoose.Schema(
     {
 
-        // women:[{
+      
             img1:{type:String, required:true},
             img2:{type:String, required:false},
             name:{type:String, required:true},
@@ -13,7 +13,7 @@ const menSchema = new mongoose.Schema(
             color:{type:String, required:false},
             brand:{type:String, required:false},
     
-        // }]
+      
     }
 
 )

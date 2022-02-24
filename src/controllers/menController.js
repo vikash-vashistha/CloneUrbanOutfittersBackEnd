@@ -19,15 +19,20 @@ router.post("", async(req,res)=>{
     }
 })
 
-//---------------------------get all mens----------------------------------------//
+//---------------------------pagination work----------------------------------------//
 
 router.get("", async(req,res)=>{
     try {
+        const page = req.query.page || 1;
+        const size = req.query.size || 10;
 
-        const men = await Men.find().lean().exec();
+        const mens = await Men.find()
+        .skip((page-1)*size)
+        .limit(size)
+        .lean().exec();
         // const user = await User.create(req.body);
 
-        return res.status(200).send(men);
+        return res.status(200).send(mens);
         
     } catch (err) {
         console.log("error is : ", err);
@@ -35,5 +40,23 @@ router.get("", async(req,res)=>{
         return res.status(500).json(err.massage);
     }
 })
+
+
+// //---------------------------get all mens----------------------------------------//
+
+// router.get("", async(req,res)=>{
+//     try {
+
+//         const men = await Men.find().lean().exec();
+//         // const user = await User.create(req.body);
+
+//         return res.status(200).send(men);
+        
+//     } catch (err) {
+//         console.log("error is : ", err);
+
+//         return res.status(500).json(err.massage);
+//     }
+// })
 
 module.exports = router;
