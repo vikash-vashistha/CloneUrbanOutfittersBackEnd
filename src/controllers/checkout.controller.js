@@ -2,13 +2,13 @@ const express=require("express");
 const router=express.Router();
 const nodemailer = require("nodemailer");
 
-const User=require("../models/checkout.model.js");
+const Checkout=require("../models/checkout.model.js");
 
 var user;
 router.post("",async(req,res)=>{
     try {
-        console.log("jhgukgk")
-          user=await User.create(req.body);
+        
+          user=await Checkout.create(req.body);
         let transporter = nodemailer.createTransport({
             host: "smtp.mailtrap.io",
             port: 587,
@@ -23,8 +23,8 @@ router.post("",async(req,res)=>{
           let info = await transporter.sendMail({
             from: 'urbanoutfitter@.com', 
              to: user.email, 
-            subject: `thank you for purchasing ${user.first_name} ${user.last_name}`, 
-            text: `Hi ${user.first_name},please confirm your details`, 
+            subject: `thank you for purchasing ${user.firstname} ${user.lastname}`, 
+            text: `Hi ${user.firstname} ${user.lastname},please confirm your address:${user.location} and email:${user.email}`, 
           });
          
           return res.status(201).send(["mail sent",user]);
