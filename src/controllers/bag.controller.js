@@ -9,7 +9,6 @@ const router = express.Router();
 
 router.post("", async (req, res) => {
   try {
-  
     //  const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
     //    new: true,
     //  });
@@ -27,9 +26,9 @@ router.post("", async (req, res) => {
         color: req.body.color,
         brand: req.body.brand,
       },
-      {
-        new: true,
-      }
+      // {
+      //   new: true,
+      // }
     );
 
     return res.send(bag);
@@ -39,10 +38,14 @@ router.post("", async (req, res) => {
   }
 });
 
-router.get("", authenticate, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-    const bag = await Bag.find().lean().exec();
+    console.log(req.params.id);
 
+    const bag = await Bag.find({ user_id: { $eq: req.params.id } })
+      .lean()
+      .exec();
+    console.log(bag);
     return res.send(bag);
   } catch (err) {
     return res.status(500).send({ message: err.message });
