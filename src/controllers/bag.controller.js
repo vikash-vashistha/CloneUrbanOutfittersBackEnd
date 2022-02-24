@@ -7,8 +7,9 @@ const authorise = require("../middlewares/authorise");
 
 const router = express.Router();
 
-router.post("", authenticate, authorise(), async (req, res) => {
+router.post("",authenticate, authorise(), async (req, res) => {
   try {
+  
     //  const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
     //    new: true,
     //  });
@@ -33,6 +34,7 @@ router.post("", authenticate, authorise(), async (req, res) => {
 
     return res.send(bag);
   } catch (err) {
+    console.log(err);
     return res.status(500).send({ message: err.message });
   }
 });

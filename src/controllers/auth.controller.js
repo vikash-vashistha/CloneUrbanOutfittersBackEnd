@@ -51,6 +51,7 @@ const login = async (req, res) => {
     //   expires: new Date(date.now() + 3000000),
     //   httpOnly: true,
     // });
+    // res.cookie("token", token).json({ user }).send({ user, token });
 
     res.send({ user, token });
   } catch (err) {
