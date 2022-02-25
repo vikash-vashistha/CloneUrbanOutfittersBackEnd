@@ -15,7 +15,7 @@ app.use("/bag", bagController);
 app.post("/register", body("email").notEmpty(), register);
 app.post("/login", login);
 
-app.listen(process.env.port || 5500, async function () {
+app.listen(process.env.PORT || 5500, async function () {
   try {
     await connect();
     console.log("app is listening on port 5500");
