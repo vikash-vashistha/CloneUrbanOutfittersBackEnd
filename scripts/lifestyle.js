@@ -1,15 +1,18 @@
-   //------------------------------------------------------------------------------//---------------------------------------------------------------------------//
+
+    
+    
+    //------------------------------------------------------------------------------//---------------------------------------------------------------------------//
         // let count = document.getElementById("first_number_").innerHTML
         let count = 1
         console.log(count)
-        url = `http://localhost:5252/mens?page=1&size=12`
+        url = `http://localhost:5252/lifestyles?page=1&size=12`
         function next_page(){
             
              count = Number(count)+1;
             document.getElementById("product__img_name_price").innerHTML = null
             document.getElementById("first_number_").innerHTML  = count
             console.log(count+1)
-            url = `http://localhost:5252/mens?page=${count}&size=12`
+            url = `http://localhost:5252/lifestyles?page=${count}&size=12`
             getUser()
         }
       
@@ -20,7 +23,7 @@
             document.getElementById("first_number_").innerHTML  = count
             // x = 2;
             console.log(count+2)
-            url = `http://localhost:5252/mens?page=${count}&size=12`
+            url = `http://localhost:5252/lifestyles?page=${count}&size=12`
             getUser()
         }
       
@@ -177,7 +180,7 @@
 
 document.getElementById("bysize_").addEventListener("change", async()=>{
    
-    url = `http://localhost:5252/mens`
+    url = `http://localhost:5252/lifestyles`
 
     try {
             
@@ -205,7 +208,7 @@ document.getElementById("bysize_").addEventListener("change", async()=>{
 /////         by color filter
 
        document.getElementById("bycolor_").addEventListener("change", async()=>{
-        url = `http://localhost:5252/mens`
+        url = `http://localhost:5252/lifestyles`
 
         try {
                 
@@ -253,7 +256,7 @@ document.getElementById("bysize_").addEventListener("change", async()=>{
   
 
     document.getElementById("byprice_").addEventListener("change", async()=>{
-        url = `http://localhost:5252/mens`
+        url = `http://localhost:5252/lifestyles`
 
         try {
                 
@@ -296,7 +299,7 @@ document.getElementById("bysize_").addEventListener("change", async()=>{
 
 
         document.getElementById("by_sort_").addEventListener("change",async()=>{
-            url = `http://localhost:5252/mens`
+            url = `http://localhost:5252/lifestyles`
 
             try {
                     
