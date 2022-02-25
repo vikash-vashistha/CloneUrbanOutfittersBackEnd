@@ -363,64 +363,97 @@ document.getElementById("bysize_").addEventListener("change", async()=>{
     }
     catch (err) {
         console.log("this error get by spell mistake:", err)
-    
+        
     }
     
 })
 
-       /////         by color filter
+/////         by color filter
 
-       document.getElementById("bycolor_").addEventListener("change", ()=>{
-        let filter_items = data.filter(function(ele){
-            var val = document.getElementById("bycolor_").value;
-            return ele.color ==val;
-        })
-        document.getElementById("product__img_name_price").innerHTML=null;
-        // console.log(filter_items);
-        appenddata(filter_items)
+       document.getElementById("bycolor_").addEventListener("change", async()=>{
+        url = `http://localhost:5252/womens`
+
+        try {
+                
+            let res = await fetch(url);            // get data from server by this line 
+            var data = await res.json();
+
+            let filter_items = data.filter(function(ele){
+                var val = document.getElementById("bycolor_").value;
+                return ele.color ==val;
+            })
+            document.getElementById("product__img_name_price").innerHTML=null;
+            // console.log(filter_items);
+            appenddata(filter_items)
+            
+        } catch (err) {
+            
+            console.log("this error get by spell mistake:", err)
+           }
+      
     })
 
     /////    by brand filter
 
-    document.getElementById("bybrand_").addEventListener("change", ()=>{
-        let filter_items = data.filter(function(ele){
-            var val = document.getElementById("bybrand_").value;
-            return ele.brand ==val;
-        })
-        document.getElementById("product__img_name_price").innerHTML=null;
-        // console.log(filter_items);
-        appenddata(filter_items)
+    document.getElementById("bybrand_").addEventListener("change", async()=>{
+       
+        try {
+                
+            let res = await fetch(url);            // get data from server by this line 
+            var data = await res.json();
+
+            let filter_items = data.filter(function(ele){
+                var val = document.getElementById("bybrand_").value;
+                return ele.brand ==val;
+            })
+            document.getElementById("product__img_name_price").innerHTML=null;
+            // console.log(filter_items);
+            appenddata(filter_items)
+        } catch (err) {
+            console.log("this error get by spell mistake:", err)
+        }
     })
 
     ///////    by price filter 
 
   
 
-    document.getElementById("byprice_").addEventListener("change", ()=>{
-        let filter_items = data.filter(function(ele){
-            let val = document.getElementById("byprice_").value;
-            if(val==25){
-                return  Number(ele.price)<=val;
-            }
-            else if(val==50){
-                return Number(ele.price)<=val && Number(ele.price)>=25;;
-            }
-            else if(val==100){
-                return Number(ele.price)<=val && Number(ele.price)>=50;;
-            }
-            else if(val==200){
-                return Number(ele.price)<=val && Number(ele.price)>=100;;
-            }
-            else if(val==500){
-                return Number(ele.price)<=val && Number(ele.price)>=200;;
-            }
-            else if(val=="more") {
-               return Number(ele.price)>=500;
-            }
-        })
-        document.getElementById("product__img_name_price").innerHTML=null;
-        // console.log(filter_items);
-        appenddata(filter_items)
+    document.getElementById("byprice_").addEventListener("change", async()=>{
+        url = `http://localhost:5252/womens`
+
+        try {
+                
+            let res = await fetch(url);            // get data from server by this line 
+            var data = await res.json();
+            let filter_items = data.filter(function(ele){
+                let val = document.getElementById("byprice_").value;
+                if(val==25){
+                    return  Number(ele.price)<=val;
+                }
+                else if(val==50){
+                    return Number(ele.price)<=val && Number(ele.price)>=25;;
+                }
+                else if(val==100){
+                    return Number(ele.price)<=val && Number(ele.price)>=50;;
+                }
+                else if(val==200){
+                    return Number(ele.price)<=val && Number(ele.price)>=100;;
+                }
+                else if(val==500){
+                    return Number(ele.price)<=val && Number(ele.price)>=200;;
+                }
+                else if(val=="more") {
+                   return Number(ele.price)>=500;
+                }
+            })
+            document.getElementById("product__img_name_price").innerHTML=null;
+            // console.log(filter_items);
+            appenddata(filter_items)
+            
+        } catch (err) {
+            console.log("this error get by spell mistake:", err)
+        }
+
     })
 
     ///// ther is no function for free pickup ////

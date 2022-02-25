@@ -3,6 +3,7 @@ const connect = require("./configs/db")
 
 const womenController = require("./controllers/womenController")
 const menController = require("./controllers/menController")
+const homeController = require("./controllers/homeController")
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 
 app.use("/womens", womenController);
 app.use("/mens", menController);
+app.use("/homes", homeController);
 
 app.listen(5252, async()=>{
     try {

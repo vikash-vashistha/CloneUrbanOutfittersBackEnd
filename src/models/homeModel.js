@@ -18,4 +18,4 @@ const homeSchema = new mongoose.Schema(
 
 )
 
-module.exports = mongoose.model("men", homeSchema);
+module.exports = mongoose.model("home", homeSchema);
