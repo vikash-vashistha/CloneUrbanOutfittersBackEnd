@@ -1,0 +1,209 @@
+/* div,
+ul,
+li {
+  border: 1px dashed black;
+} */
+
+/* #navbar {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  margin: 0%;
+  width: 100%;
+} */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#title {
+  cursor: pointer;
+  margin-top: -2px;
+  width: 100%;
+  position: fixed;
+  /* top: 0; */
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  background-color: rgb(245, 244, 244);
+  z-index: 1;
+}
+
+#title > div {
+  margin: 10px;
+}
+
+.nav-bar {
+  margin-top: 35px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  padding: 10px 0;
+  box-sizing: border-box;
+  /* border-bottom: 1px solid #1a252f; */
+  z-index: 1;
+}
+
+.nav-bar ul {
+  list-style: none;
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+  /* letter-spacing: 2px; */
+  position: relative;
+}
+
+.nav-bar ul li {
+  width: 65px;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.7s ease;
+  color: black;
+}
+
+.nav-bar ul li:first-child {
+  width: 280px;
+  /* height: 20px; */
+  padding: auto 0%;
+  margin-left: 0px;
+  margin-right: 150px;
+  font-size: 16px;
+}
+
+.mega-menu > div:nth-child(1) {
+  width: 30%;
+  padding: auto 0%;
+  margin-left: 0px;
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
+  /* margin-right: 200px; */
+  /* font-size: 16px; */
+}
+
+.nav-bar ul li:last-child {
+  width: 220px;
+  margin-right: 0;
+  margin-left: 80px;
+}
+
+.fa-search:before {
+  content: "\f002";
+  margin-left: -391%;
+  font-size: 16px;
+  color: gray;
+}
+
+.fa-shopping-bag:before {
+  content: "\f290";
+  font-size: 20px;
+  color: gray;
+}
+
+.nav-bar ul li:hover {
+  color: gray;
+}
+
+/* .nav-bar ul li:hover .mega-menu {
+  color: #707070;
+} */
+
+.nav-bar ul li .mega-menu p:hover {
+  color: gray;
+}
+
+.header-banner {
+  background: white;
+  width: 100%;
+  height: 320px;
+}
+
+.mega-menu {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: all 0.2s ease; */
+  box-sizing: border-box;
+  padding: 40px;
+  color: black;
+  font-size: 12px;
+}
+
+.nav-bar ul li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inner-mega-menu {
+  /* border: 1px solid red; */
+  width: 24%;
+  float: left;
+  /* margin-right: 1%; */
+}
+
+.inner-mega-menu > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-mega-menu > div > div {
+  width: 50%;
+}
+.inner-mega-menu p {
+  padding: 5px 0;
+  transition: all 0.7s ease;
+}
+.inner-mega-menu h3 {
+  margin-bottom: 30px;
+}
+
+.inner-mega-menu:last-child {
+  width: 15%;
+  margin-right: 0%;
+}
+
+#search {
+  margin-top: -13px;
+  height: 40px;
+}
+
+.nav-bar > img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar > h1 {
+  margin: 0%;
+  padding: 0%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
