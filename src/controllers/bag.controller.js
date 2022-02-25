@@ -52,4 +52,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    console.log(req.params.id);
+
+    const bag = await Bag.findByIdAndDelete(req.params.id).lean().exec();
+    console.log(bag);
+    return res.send(bag);
+  } catch (err) {
+    return res.status(500).send({ message: err.message });
+  }
+});
+
 module.exports = router;
