@@ -7,7 +7,7 @@ const authorise = require("../middlewares/authorise");
 
 const router = express.Router();
 
-router.post("", authenticate, async (req, res) => {
+router.post("", async (req, res) => {
   try {
     console.log(req.user, req.user._id);
     // console.log(req.headers);
