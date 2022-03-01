@@ -34,6 +34,12 @@ module.exports = async (req, res, next) => {
   // if token is invalid then we will throw an error
   try {
     user = await verifyToken(token);
+
+
+    // console.log(user, req.body);
+    //very importent Bicky helped init
+
+
   } catch (err) {
     return res.status(400).send({
       message: "authorization token was not provided or was not valid",
